@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample one</title>
+</head>
+<body>
+<h1>{{var_one}}</h1>
+<h2 ng-repeat="x in array">{{x}}</h2>
+<table>
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+
+    </tr>
+    <tr ng-repeat="y in obj">
+        <td>{{y.pr_id}}</td>
+        <td>{{y.pr_name}}</td>
+    </tr>
+</table>
+<div ng-repeat="z in my_fun()">{{z}}</div>
+</body>
+<script src="../First-project/bower_components/angular/angular.min.js"></script>
+<script>
+    var app =angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    function  ctrl($scope) {
+        $scope.var_one="Angular Js";
+        $scope.array=['pr_id',100,'pr_name','Laptops'];
+        $scope.obj=[{'pr_id':101,'pr_name':'Mobiles'},
+                    {'pr_id':102,'pr_name':'Pendrives'},
+                    {'pr_id':103,'pr_name':'Smart TV'},
+                    {'pr_id':104,'pr_name':'Memory Card'}];
+        $scope.my_fun=function () {
+             var val=[10,20,30];
+            return val;
+        }
+
+
+    }
+</script>
+</html>

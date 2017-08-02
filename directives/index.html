@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="my_app">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Directives Session</title>
+    <link rel="stylesheet" href="../bower/bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div ng-controller="ctrl">
+        <h2 style="color:blue">Calling variable using expressions</h2>
+        <span >{{var_one}}</span>
+        <h2 style="color:blue"> Calling array using ng-repeat and ng-if directive</h2>
+        <span ng-repeat="x in array_one">
+            <i ng-if="$middle">{{x}}</i>
+        </span>
+        <h2 style="color:blue">Calling variable using ng-bind</h2>
+        <span ng-bind="val1+val2"></span>
+        <h2 style="color:blue">Calling variable using ng-if</h2>
+        <span ng-if="val1+val2"></span>
+        <h2>Calling data using ng-switch directive</h2>
+        <div ng-switch=""> </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="../bower/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="controllers/first_controller.js"></script>
+</html>

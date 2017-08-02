@@ -1,6 +1,7 @@
 {
   "name": "Diwakar",
   "dependencies": {
-    "angular": "latest"
+    "angular": "latest",
+    "bootstrap": "latest"
   }
 }
